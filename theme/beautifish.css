@@ -1,0 +1,255 @@
+@import url("./modules/transparent-window.css");
+@import url("./modules/custom-block-code.css");
+
+
+/*
+  ____                   _   _ ______ _     _     
+ |  _ \                 | | (_)  ____(_)   | |    
+ | |_) | ___  __ _ _   _| |_ _| |__   _ ___| |__  
+ |  _ < / _ \/ _` | | | | __| |  __| | / __| '_ \ 
+ | |_) |  __/ (_| | |_| | |_| | |    | \__ \ | | |
+ |____/ \___|\__,_|\__,_|\__|_|_|    |_|___/_| |_|
+
+ */
+
+
+/*=================================================================|
+|    This file contains only variables reset, and contains default |
+|    colors, to change the colors, you need to re-define the       |
+|    variables, and import this file in your own css               |
+|=================================================================*/
+
+
+
+/*
+********************************************
+*           Variables definition           *
+********************************************
+*/
+:root {
+    /* --beautifish-background-image: url(https://i.imgur.com/Po6f4N1.jpg); */
+    --beautifish-background-image: url(https://miro.medium.com/v2/resize:fit:679/1*GpUquRKGMEpRiuLh7TEMnQ.gif);
+
+    --beautifish-primary: rgb(21, 67, 96);
+    --beautifish-secondary: rgb(26, 82, 118);
+    --beautifish-tertiary: rgb(31, 97, 141);
+
+    --beautifish-transparent-primary: rgba(21, 67, 96, 0.3);
+    --beautifish-transparent-secondary: rgba(26, 82, 118, 0.3);
+    --beautifish-transparent-tertiary: rgba(31, 97, 141, 0.5);
+
+    
+    --beautifish-text-primary: rgb(127, 179, 213);
+    --beautifish-text-secondary: rgb(169, 204, 227);
+    --beautifish-text-tertiary: rgb(212, 230, 241);
+  
+    --beautifish-text-important: rgb( 88, 214, 141 );
+    --beautifish-text-information: rgb(24, 128, 197);
+    --beautifish-text-positive: rgb(15, 255, 123);
+    --beautifish-text-warning: rgb(252, 255, 103);
+    --beautifish-text-danger: rgb(255, 105, 105);
+    --beautifish-text-muted: rgb(103, 108, 146);
+  
+    --beautifish-icon-primary: var(--beautifish-text-primary);
+    --beautifish-icon-secondary: var(--beautifish-text-secondary);
+    --beautifish-icon-tertiary: var(--beautifish-text-tertiary);
+
+    --beautifish-button-primary: rgb( 19, 141, 117 );
+    --beautifish-button-secondary: rgb( 22, 160, 133 );
+    --beautifish-button-tertiary: rgb(69, 179, 157);
+
+
+
+    --body-background-blur:        blur(0px);
+    --body-background-brightness:  brightness(80%);
+
+}
+
+
+/*
+********************************************
+*          Adding background image         *
+********************************************
+*/
+body {
+    background: #fff var(--beautifish-background-image) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+
+/*
+********************************************
+*       Setup transparent background       *
+********************************************
+*/
+@supports (color: color-mix(in lch, red, blue)) and (top: var(--f)) {
+    .visual-refresh.theme-dark,.visual-refresh .theme-dark {
+
+        /* Making discord mostly transparent */
+        --background-tertiary: rgba(0, 0, 0, 0);
+        --bg-base-tertiary: rgba(0, 0, 0, 0);
+        --background-base-lowest: rgba(0, 0, 0, 0);
+        --bg-overlay-chat: rgba(0, 0, 0, 0);
+
+        /* both needed to change background of "Active now" panel*/
+        --background-primary: rgba(0, 0, 0, 0); /* Full setting page background */
+        --background-secondary: rgba(0, 0, 0, 0);
+
+        /* Background color for the setting page */
+        /* application and server card (in "discover" page) AND soundboard selector */
+        --background-base-low: rgba(0, 0, 0, 0);
+    }
+}
+
+/************************************************************************************************/
+/*                                  Start of the customization                                  */
+/************************************************************************************************/
+
+/* Global variable */
+@supports (color: color-mix(in lch, red, blue)) and (top: var(--f)) {
+    .visual-refresh.theme-dark, .visual-refresh .theme-dark  {
+        /* Making discord mostly transparent */
+        --background-tertiary: var(--beautifish-transparent-primary);
+
+        /* Chat input text background */
+        /* User island background (a.k.a. the card in bottom left with your username) */
+        --bg-overlay-floating: var(--beautifish-primary);
+
+        /* popout secondary color (gif/emot/etc), 
+           server member page, 
+           verser channel search page,
+           shop page
+           embed content
+        */
+        --background-base-lower: var(--beautifish-transparent-secondary);
+        --background-surface-high : var(--beautifish-transparent-tertiary);
+
+        /* Modals 
+            - new event modal, 
+            - invit modal, 
+            - new channel modal, 
+            - folder config modal, 
+            - new server modal
+        */
+        --modal-background: var(--beautifish-primary);
+        --modal-footer-background: var(--beautifish-secondary);
+        --bg-base-secondary: rgba(0, 0, 0, 0);
+
+        /* Profile popout
+           Don't work for nitro users
+         */
+        --bg-surface-overlay: var(--beautifish-secondary); 
+        
+        /* context menu on messag hover (reaction, transmit, actions...) */
+        --background-surface-highest: var(--beautifish-secondary);
+
+
+        /* , context menu (message "+" button, server properties, right click, notifications),  */
+        /* Context menu, including :
+            - message "+" button
+            - server properties,
+            - all right click menu
+            - channel notification setting*
+        Also : 
+            - message in modal (threads, pinned message)
+            - top left icon background 
+        */
+        --background-surface-higher: var(--beautifish-tertiary);
+
+        /* Context information (floating message on hover) */
+        --background-floating: var(--beautifish-tertiary);
+
+
+        /**************
+        * Text colors *
+        **************/
+
+        --header-muted: DeepPink;
+        --header-primary: var(--beautifish-text-primary);
+        --header-secondary: var(--beautifish-text-secondary); /* User status in friend list */
+
+        --text-normal: var(--beautifish-text-primary); /* Message text, server name, header title, server view activity name in activity list */
+        
+        --text-brand: var(--beautifish-text-important);
+        --text-link: var(--beautifish-text-important); /* links */
+        --text-muted: var(--beautifish-text-muted); /* message date, search placeholder, user activity in friends list */
+        
+        --text-feedback-positive: var(--beautifish-text-positive);
+        --text-positive: var(---beautifish-text-positive);
+        --text-warning: var(--beautifish-text-warning);
+        --text-danger: var(--beautifish-text-danger);
+
+        --text-primary: var(--beautifish-text-primary); /* */
+        --text-secondary: var(--beautifish-text-secondary); /* User activities in server user list */
+        --text-tertiary: var(--beautifish-text-tertiary); /* Username in DM list */
+        
+
+        --channels-default: var(--beautifish-text-secondary);
+        --channel-icon: var(--beautifish-icon-secondary); /* Icon of the channels */
+
+        --interactive-muted: var(--beautifish-text-muted); /* Muted channels */
+        --interactive-normal: var(--beautifish-icon-primary); /* a lot of icons */
+        
+        --icon-primary: var(--beautifish-icon-primary); /* member list toggle (when active), current channel icons */
+        --icon-secondary: var(--beautifish-icon-secondary);
+        --icon-tertiary: var(--beautifish-icon-tertiary);
+
+        --button-primary-text: var(--beautifish-button-primary);
+        --button-secondary-text: var(--beautifish-button-secondary);
+        --button-tertiary-text: var(--beautifish-button-tertiary);
+
+        --button-filled-brand-text: var(--beautifish-text-tertiary);
+        --button-filled-brand-background: var(--beautifish-tertiary);
+        --button-secondary-background: var(--beautifish-secondary);
+
+        --button-danger-background: var(--beautifish-text-danger);
+        --button-outline-danger-background: var(--beautifish-secondary);
+    }
+}
+
+
+/* Remove litle shadow in chanel top bar */
+.theme-dark .children__9293f:after {
+    background: none;
+}
+
+/* Emote/Gif/Sticker picker popout */
+.contentWrapper__08434, /* in chat */
+.container__0800c /* in voice channel (tool bar) */
+{
+    --background-base-lower: var(--beautifish-secondary);
+    --background-surface-high : var(--beautifish-secondary);
+}
+
+/* Emote picker footer in voice channel */
+.slotsContainer__0800c {
+    background-color: var(--beautifish-tertiary);
+}
+
+/* Target only the server manangement page "Browse Channels", and "Members" */
+.visual-refresh .page_c48ade>.chat_f75fb0 {
+    --background-base-lower: rgba(0, 0, 0, 0);
+    background: var(--beautifish-transparent-secondary) !important;
+}
+
+/*
+Because soundboard picker use "--background-base-low" variables
+as background color, we need to set manually another color
+*/
+.theme-dark .picker__09f65,
+.theme-midnight .picker__09f65,
+.theme-darker .picker__09f65 {
+    background-color: var(--beautifish-tertiary);
+}
+
+
+/*
+Because card on Apps and Servers discorver page use "--background-base-low" 
+variables as background color, we need to set manually another color 
+*/
+.visual-refresh.theme-dark .card__84e3e,
+.visual-refresh.theme-midnight .card__84e3e,
+.visual-refresh.theme-darker .card__84e3e {
+    background: var(--beautifish-transparent-secondary); 
+}
