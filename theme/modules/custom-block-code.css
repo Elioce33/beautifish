@@ -1,3 +1,10 @@
+/*
+********************************************
+*       Setup custom code block color      *
+*          based on langage used           *
+********************************************
+*/
+
 
 /*affichage du code dans les message*/
 .hljs,

@@ -1,6 +1,6 @@
 @import url("https://fishcorp.fr/discord-theme/beautifish.css");
-
-
+@import url("https://fishcorp.fr/discord-theme/modules/transparent-window.css");
+@import url("https://fishcorp.fr/discord-theme/modules/custom-block-code.css");
 
 /*
   ____                   _   _ ______ _     _     
@@ -10,8 +10,7 @@
  | |_) |  __/ (_| | |_| | |_| | |    | \__ \ | | |
  |____/ \___|\__,_|\__,_|\__|_|_|    |_|___/_| |_|
 
- */
-
+*/
 
 /*=================================================================|
 |    This file contains only variables reset, and contains default |
