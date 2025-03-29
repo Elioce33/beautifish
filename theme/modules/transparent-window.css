@@ -21,3 +21,15 @@
         --background-base-low: rgba(0, 0, 0, 0);
     }
 }
+
+
+/*
+********************************************
+*          Adding background image         *
+********************************************
+*/
+body {
+    background: #fff var(--beautifish-background-image) !important;
+    background-position: center !important;
+    background-size: cover !important;
+}

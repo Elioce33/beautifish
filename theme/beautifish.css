@@ -11,19 +11,6 @@
 
 
 
-/*
-********************************************
-*          Adding background image         *
-********************************************
-*/
-body {
-    background: #fff var(--beautifish-background-image) !important;
-    background-position: center !important;
-    background-size: cover !important;
-}
-
-
-
 /************************************************************************************************/
 /*                                  Start of the customization                                  */
 /************************************************************************************************/

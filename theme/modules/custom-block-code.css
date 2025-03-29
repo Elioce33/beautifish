@@ -6,7 +6,6 @@
 */
 
 
-/*affichage du code dans les message*/
 .hljs,
 .hljs[class~="c"],
 .hljs[class~="c++"],
@@ -47,7 +46,9 @@
 .hljs[class~="elixir"],
 .hljs[class~="properties"] {
   padding: 6px 5px 2px 5px !important;
-  background-color: #0000004f !important; /*modif le background du code*/
+  
+  /* To change background color for every code block */
+  background-color: #0000004f !important;
 }
 
 .hljs[class~="c"]::before,
