@@ -1,0 +1,65 @@
+@import url("https://fishcorp.fr/discord-theme/beautifish.css");
+
+
+
+/*
+  ____                   _   _ ______ _     _     
+ |  _ \                 | | (_)  ____(_)   | |    
+ | |_) | ___  __ _ _   _| |_ _| |__   _ ___| |__  
+ |  _ < / _ \/ _` | | | | __| |  __| | / __| '_ \ 
+ | |_) |  __/ (_| | |_| | |_| | |    | \__ \ | | |
+ |____/ \___|\__,_|\__,_|\__|_|_|    |_|___/_| |_|
+
+ */
+
+
+/*=================================================================|
+|    This file contains only variables reset, and contains default |
+|    colors, to change the colors, you need to re-define the       |
+|    variables, and import this file in your own css               |
+|=================================================================*/
+
+
+
+/*
+********************************************
+*           Variables definition           *
+********************************************
+*/
+:root {
+    /* --beautifish-background-image: url(https://i.imgur.com/Po6f4N1.jpg); */
+    --beautifish-background-image: url(https://miro.medium.com/v2/resize:fit:679/1*GpUquRKGMEpRiuLh7TEMnQ.gif);
+
+    --beautifish-primary: rgb(21, 67, 96);
+    --beautifish-secondary: rgb(26, 82, 118);
+    --beautifish-tertiary: rgb(31, 97, 141);
+
+    --beautifish-transparent-primary: rgba(21, 67, 96, 0.3);
+    --beautifish-transparent-secondary: rgba(26, 82, 118, 0.3);
+    --beautifish-transparent-tertiary: rgba(31, 97, 141, 0.5);
+
+    
+    --beautifish-text-primary: rgb(127, 179, 213);
+    --beautifish-text-secondary: rgb(169, 204, 227);
+    --beautifish-text-tertiary: rgb(212, 230, 241);
+  
+    --beautifish-text-important: rgb( 88, 214, 141 );
+    --beautifish-text-information: rgb(24, 128, 197);
+    --beautifish-text-positive: rgb(15, 255, 123);
+    --beautifish-text-warning: rgb(252, 255, 103);
+    --beautifish-text-danger: rgb(255, 105, 105);
+    --beautifish-text-muted: rgb(103, 108, 146);
+  
+    --beautifish-icon-primary: var(--beautifish-text-primary);
+    --beautifish-icon-secondary: var(--beautifish-text-secondary);
+    --beautifish-icon-tertiary: var(--beautifish-text-tertiary);
+
+    --beautifish-button-primary: rgb( 19, 141, 117 );
+    --beautifish-button-secondary: rgb( 22, 160, 133 );
+    --beautifish-button-tertiary: rgb(69, 179, 157);
+
+
+
+    --body-background-blur:        blur(0px);
+    --body-background-brightness:  brightness(80%);
+}

@@ -1,0 +1,23 @@
+/*
+********************************************
+*       Setup transparent background       *
+********************************************
+*/
+@supports (color: color-mix(in lch, red, blue)) and (top: var(--f)) {
+    .visual-refresh.theme-dark,.visual-refresh .theme-dark {
+
+        /* Making discord mostly transparent */
+        --background-tertiary: rgba(0, 0, 0, 0);
+        --bg-base-tertiary: rgba(0, 0, 0, 0);
+        --background-base-lowest: rgba(0, 0, 0, 0);
+        --bg-overlay-chat: rgba(0, 0, 0, 0);
+
+        /* both needed to change background of "Active now" panel*/
+        --background-primary: rgba(0, 0, 0, 0); /* Full setting page background */
+        --background-secondary: rgba(0, 0, 0, 0);
+
+        /* Background color for the setting page */
+        /* application and server card (in "discover" page) AND soundboard selector */
+        --background-base-low: rgba(0, 0, 0, 0);
+    }
+}
