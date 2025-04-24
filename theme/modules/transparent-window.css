@@ -19,6 +19,9 @@
         /* Background color for the setting page */
         /* application and server card (in "discover" page) AND soundboard selector */
         --background-base-low: rgba(0, 0, 0, 0);
+
+        /* In DM voice chat background */
+        --black: rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -32,4 +35,5 @@ body {
     background: #fff var(--beautifish-background-image) !important;
     background-position: center !important;
     background-size: cover !important;
+    backdrop-filter: var(--body-background-brightness) var(--body-background-blur);
 }
