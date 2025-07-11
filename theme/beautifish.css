@@ -23,7 +23,8 @@
 
         /* Chat input text background */
         /* User island background (a.k.a. the card in bottom left with your username) */
-        --bg-overlay-floating: var(--beautifish-primary);
+        /* --bg-overlay-floating: var(--beautifish-primary); */
+        --chat-background-default: var(--beautifish-primary);
 
         /* popout secondary color (gif/emot/etc), 
            server member page, 
@@ -31,7 +32,7 @@
            shop page
            embed content
         */
-        --background-base-lower: var(--beautifish-transparent-secondary);
+        /* --background-base-lower: var(--beautifish-transparent-secondary); */
         --background-surface-high : var(--beautifish-transparent-tertiary);
 
         /* Modals 
