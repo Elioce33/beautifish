@@ -21,7 +21,7 @@
         --background-base-low: rgba(0, 0, 0, 0);
 
         /* Chat container, members wrap (side bar) */
-        --background-base-lower: var(----background-base-low);
+        --background-base-lower: var(--background-base-low);
 
         /* In DM voice chat background */
         --black: rgba(0, 0, 0, 0.3);

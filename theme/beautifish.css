@@ -163,3 +163,19 @@ variables as background color, we need to set manually another color
 .visual-refresh.theme-darker .card__84e3e {
     background: var(--beautifish-transparent-secondary); 
 }
+
+/* Setting modal background */
+.modalContent_e44912 {
+    background-color: var(--beautifish-transparent-secondary);
+    backdrop-filter: blur(3px);
+}
+
+/* Connected User info bar */
+.panels__5e434 {
+    background-color: var(--transparent-primary);
+    backdrop-filter: blur(3px);
+}
+
+.scroller__99e7c { /* direct message list margin */
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs));
+}
