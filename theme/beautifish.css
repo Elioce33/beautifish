@@ -179,3 +179,7 @@ variables as background color, we need to set manually another color
 .scroller__99e7c { /* direct message list margin */
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs));
 }
+
+.container__2637a { /* server channel list */
+    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 4px);
+}
